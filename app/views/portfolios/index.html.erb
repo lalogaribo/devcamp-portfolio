@@ -4,11 +4,11 @@
 
 <a href="portfolios/new">Create new item</a>
 <% @portfolio_items.each do |portfolio_items| %>
-  <p><%= portfolio_items.title %></p>
-  <p><%= portfolio_items.subtitle %></p>
-  <p><%= portfolio_items.body %></p>
-  <p><%= portfolio_items.thumb_image %></p>
-  <%=image_tag portfolio_items.thumb_image unless portfolio_items.thumb_image.nil?%>
-  <%= link_to "Edit", edit_portfolio_path(portfolio_items.id) %>
-  
+<p><%= link_to portfolio_items.title,portfolio_path(portfolio_items.id) %></p>
+<p><%= portfolio_items.subtitle %></p>
+<p><%= portfolio_items.body %></p>
+<p><%= portfolio_items.thumb_image %></p>
+<%=image_tag portfolio_items.thumb_image unless portfolio_items.thumb_image.nil?%>
+<%= link_to "Edit", edit_portfolio_path(portfolio_items.id) %>
+
 <% end %>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
+  get 'angular-items', to: 'portfolios#angular'
 
 
   resources :blogs do

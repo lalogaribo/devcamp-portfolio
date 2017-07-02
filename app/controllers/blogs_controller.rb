@@ -56,10 +56,10 @@ class BlogsController < ApplicationController
       format.html { redirect_to blogs_url, notice: 'Blog was removed' }
     end
   end
+
   def toggle_status
-    if
-    @blog.draft?
-    @blog.published!
+    if @blog.draft?
+      @blog.published!
     elsif @blog.published?
       @blog.draft!
     end
@@ -67,13 +67,13 @@ class BlogsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_blog
-      @blog = Blog.friendly.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_blog
+    @blog = Blog.friendly.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def blog_params
-      params.require(:blog).permit(:title, :body)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def blog_params
+    params.require(:blog).permit(:title, :body)
+  end
 end

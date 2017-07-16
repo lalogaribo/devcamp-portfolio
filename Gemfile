@@ -53,13 +53,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise', '~> 4.3'
-<<<<<<< HEAD
 gem 'petergate', '~> 1.6', '>= 1.6.3'
-=======
 gem 'friendly_id', '~> 5.1.0'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'emg_view_tool', git: 'https://github.com/lalogaribo/emg_view_tool'
-
-
-
->>>>>>> 36dcc0f8e7067ac5b33304ab4fb2778b40b0e4f0

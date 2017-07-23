@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 20170716033056) do
     t.datetime 'updated_at', null: false
   end
 
-<<<<<<< HEAD
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 20170716033056) do
     t.string   "roles"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-=======
+
   create_table 'users', force: :cascade do |t|
     t.string 'email', default: '', null: false
     t.string 'encrypted_password', default: '', null: false
@@ -107,7 +107,7 @@ ActiveRecord::Schema.define(version: 20170716033056) do
     t.datetime 'updated_at', null: false
     t.index ['email'], name: 'index_users_on_email', unique: true, using: :btree
     t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true, using: :btree
->>>>>>> 36dcc0f8e7067ac5b33304ab4fb2778b40b0e4f0
+
   end
 
   add_foreign_key 'blogs', 'topics'

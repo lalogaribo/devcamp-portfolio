@@ -1,4 +1,22 @@
 GIT
+  remote: git://github.com/amatsuda/kaminari.git
+  revision: 2d22392756fe2f2a54b44d439df378f62096ad1d
+  branch: master
+  specs:
+    kaminari (1.0.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.0.1)
+      kaminari-activerecord (= 1.0.1)
+      kaminari-core (= 1.0.1)
+    kaminari-actionview (1.0.1)
+      actionview
+      kaminari-core (= 1.0.1)
+    kaminari-activerecord (1.0.1)
+      activerecord
+      kaminari-core (= 1.0.1)
+    kaminari-core (1.0.1)
+
+GIT
   remote: https://github.com/lalogaribo/emg_view_tool
   revision: 1154e423ff6965e4d7627e7f655ce1709b8b3b11
   specs:
@@ -202,6 +220,7 @@ DEPENDENCIES
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
   jquery-rails
+  kaminari!
   listen (~> 3.0.5)
   petergate (~> 1.6, >= 1.6.3)
   pg (~> 0.18)

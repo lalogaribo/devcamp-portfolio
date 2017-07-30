@@ -58,3 +58,4 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'emg_view_tool', git: 'https://github.com/lalogaribo/emg_view_tool'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'

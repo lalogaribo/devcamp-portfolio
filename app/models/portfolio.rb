@@ -4,11 +4,12 @@ class Portfolio < ApplicationRecord
   accepts_nested_attributes_for :technologies,
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
   include Placeholder
+
   def self.angular
     where(subtitle: 'Angular')
   end
 
-  scope :ruby_on_rails_portfolio_items, -> {where(subtitle: 'Ruby on Rails')}
+  scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'Ruby on Rails') }
 
   after_initialize :set_defaults
 

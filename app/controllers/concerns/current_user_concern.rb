@@ -3,9 +3,11 @@ module CurrentUserConcern
   included do
     before_filter :current_user
   end
+
   def current_user
     super || guest_user
   end
+
   def guest_user
     guest = GuestUser.new
     guest.name = 'Guest User'

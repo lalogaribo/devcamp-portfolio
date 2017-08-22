@@ -13,7 +13,7 @@
 
 ```ruby
 def my_method
-  puts "Here it is"
+  puts "Hello World"
 end
 ```
 

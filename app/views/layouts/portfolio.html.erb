@@ -15,6 +15,7 @@
 <!-- Portfolio masthead partial -->
 <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
 <%= yield %>
+<%= alerts %>
 <%= render 'shared/portfolio_footer' %>
 
 </body>

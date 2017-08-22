@@ -13,6 +13,11 @@
           <strong><p><%= t.name %></p></strong>
       <% end %>
       <%= link_to 'View all portfolios', portfolios_path %>
+      <% if logged_in?(:site_admin) %>
+        <div >
+          <%= link_to 'Edit portfolio', edit_portfolio_path(@portfolio_item), class: 'btn btn-warning' %>
+      </div>
+      <% end %>
     </div>
   </div>
 

@@ -5,7 +5,11 @@ class BlogsController < ApplicationController
          site_admin: :all
 
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    if logged_in?(:site_admin)
+      @blogs = Blog.recent.page(params[:page]).per(5)
+    else
+      @blogs = Blog.published.recent.page(params[:page]).per(5)
+    end
     @page_title = 'My portfolio Blog'
   end
 
@@ -27,7 +31,7 @@ class BlogsController < ApplicationController
     @blog = Blog.new(blog_params)
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to @blog, notice: 'Your post is now alivee.' }
+        format.html { redirect_to @blog, notice: 'Your post was successfully created .' }
       else
         format.html { render :new }
       end

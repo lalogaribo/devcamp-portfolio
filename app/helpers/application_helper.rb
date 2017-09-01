@@ -66,6 +66,10 @@ module ApplicationHelper
   def alert_generator msg
     js add_gritter(msg, title: 'Eduardo Mendoza Portfolio', sticky: false)
   end
+
+  def fav_icon
+    favicon_link_tag '/public/favicon.ico'
+  end
 end
 
 
